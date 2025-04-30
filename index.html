@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talison Pereira Trajano - Stage Câbleur raccordeur réseaux fibre optique</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #f8fafc;
+            color: #334155;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+        }
+        
+        .skill-bar {
+            height: 8px;
+            border-radius: 4px;
+            background-color: #e2e8f0;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            border-radius: 4px;
+            background: linear-gradient(90deg, #3b82f6 0%, #6366f1 100%);
+            transition: width 1.5s ease-in-out;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #3b82f6;
+        }
+        
+        .timeline-item:after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 16px;
+            width: 2px;
+            height: calc(100% + 2rem);
+            background: #cbd5e1;
+        }
+        
+        .timeline-item:last-child:after {
+            display: none;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50%;
+            height: 3px;
+            background: #3b82f6;
+            border-radius: 3px;
+        }
+        
+        .project-card {
+            transition: all 0.3s ease;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-overlay {
+            background: rgba(0, 0, 0, 0.7);
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover .project-overlay {
+            background: rgba(0, 0, 0, 0.5);
+        }
+        
+        .profile-image-container {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .profile-image-container:hover .profile-image {
+            transform: scale(1.05);
+        }
+        
+        .profile-image {
+            transition: all 0.3s ease;
+        }
+        
+        .linkedin-badge {
+            position: absolute;
+            bottom: -10px;
+            right: -10px;
+            width: 40px;
+            height: 40px;
+            background-color: #0A66C2;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .profile-image-container:hover .linkedin-badge {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Header Section -->
+    <header class="gradient-bg text-white py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col items-center text-center" data-aos="fade-up">
+                <div class="profile-image-container">
+                    <a href="https://www.linkedin.com/in/talisontrajano/" target="_blank" class="w-32 h-32 md:w-40 md:h-40 rounded-full bg-white flex items-center justify-center mb-6 shadow-lg profile-image">
+                        <i class="fas fa-user-tie text-5xl text-blue-500"></i>
+                    </a>
+                    <div class="linkedin-badge">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                </div>
+                <h1 class="text-3xl md:text-4xl font-bold mb-2">Talison Pereira Trajano</h1>
+                <h2 class="text-xl md:text-2xl font-medium mb-6">Stage Câbleur raccordeur réseaux fibre optique</h2>
+                <p class="max-w-2xl mx-auto text-lg md:text-xl opacity-0 fade-in" style="animation-delay: 0.5s;">
+                    "Électricien avec des habilitations à jour, je me reconvertis actuellement dans le domaine des réseaux fibre optique. Motivé et prêt à relever de nouveaux défis."
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-2xl font-bold mb-8 text-center section-title" data-aos="fade-up">Coordonnées</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex items-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4 text-blue-500">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-medium text-gray-500">Email</h3>
+                        <p class="text-lg">talison.pt@gmx.fr</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex items-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4 text-blue-500">
+                        <i class="fas fa-phone-alt text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-medium text-gray-500">Téléphone</h3>
+                        <p class="text-lg">0752963006</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex items-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4 text-blue-500">
+                        <i class="fas fa-map-marker-alt text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-medium text-gray-500">Localisation</h3>
+                        <p class="text-lg">76000 Rouen, France</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex items-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4 text-blue-500">
+                        <i class="fas fa-car text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-medium text-gray-500">Permis</h3>
+                        <p class="text-lg">Permis B</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-2xl font-bold mb-8 text-center section-title" data-aos="fade-up">Compétences</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div data-aos="fade-right">
+                    <div class="mb-6">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium">Gestion de planning</span>
+                            <span>4/5</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium">Sens de l'initiative</span>
+                            <span>3.5/5</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium">Ponctualité</span>
+                            <span>5/5</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium">Autonomie</span>
+                            <span>5/5</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 100%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <div class="mb-6">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium">Tirage de câbles, mise en service réseau</span>
+                            <span>5/5</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium">Soudure fibre optique</span>
+                            <span=4/5</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium">Travail en équipe</span>
+                            <span>5/5</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium">Rédaction de comptes rendus</span>
+                            <span>4.5/5</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-2xl font-bold mb-8 text-center section-title" data-aos="fade-up">Expériences professionnelles</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="timeline-item" data-aos="fade-right">
+                    <h3 class="text-xl font-bold text-blue-600">Fradelec</h3>
+                    <p class="text-gray-500 mb-2">Électricien</p>
+                    <p class="text-gray-500">Nov. 2023 - Déc. 2023</p>
+                    <p class="mt-2">Installation et maintenance électrique dans divers environnements.</p>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                    <h3 class="text-xl font-bold text-blue-600">S3A</h3>
+                    <p class="text-gray-500 mb-2">Manœuvre électricien</p>
+                    <p class="text-gray-500">Juil. 2023 - Sept. 2023</p>
+                    <p class="mt-2">Participation à des projets électriques en tant que manœuvre qualifié.</p>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+                    <h3 class="text-xl font-bold text-blue-600">Prestelec</h3>
+                    <p class="text-gray-500 mb-2">Câblage de tableaux</p>
+                    <p class="text-gray-500">Mars 2023 - Juin 2023</p>
+                    <p class="mt-2">Spécialisation dans le câblage de tableaux électriques industriels et tertiaires.</p>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+                    <h3 class="text-xl font-bold text-blue-600">Avenir Déconstruction</h3>
+                    <p class="text-gray-500 mb-2">Manœuvre BTP</p>
+                    <p class="text-gray-500">Janv. 2023 - Juil. 2023</p>
+                    <p class="mt-2">Travaux de déconstruction et préparation de chantiers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-2xl font-bold mb-8 text-center section-title" data-aos="fade-up">Formations</h2>
+            <div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-start" data-aos="zoom-in">
+                    <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4 text-blue-500">
+                        <i class="fas fa-graduation-cap text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-600">Bac Pro MELEC</h3>
+                        <p class="text-gray-500 mb-2">Lycée Pierre Mendès France</p>
+                        <p class="text-gray-500">Niveau Terminal, non diplômé</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm flex items-start" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4 text-blue-500">
+                        <i class="fas fa-certificate text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-600">CAP Électricien</h3>
+                        <p class="text-gray-500 mb-2">Lycée Jean-Marie Michotte</p>
+                        <p class="text-gray-500">Diplômé</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-2xl font-bold mb-8 text-center section-title" data-aos="fade-up">Certifications</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm transition-all duration-300 card-hover" data-aos="flip-left">
+                    <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-4 text-blue-500">
+                        <i class="fas fa-bolt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-2">Habilitations électriques</h3>
+                    <p class="text-gray-500 text-center">2023 & 2025</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm transition-all duration-300 card-hover" data-aos="flip-left" data-aos-delay="100">
+                    <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-4 text-blue-500">
+                        <i class="fas fa-cogs text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-2">CACES nacelle R486</h3>
+                    <p class="text-gray-500 text-center">2025</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm transition-all duration-300 card-hover" data-aos="flip-left" data-aos-delay="200">
+                    <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-4 text-blue-500">
+                        <i class="fas fa-hard-hat text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-2">Carte BTP</h3>
+                    <p class="text-gray-500 text-center">2023</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm transition-all duration-300 card-hover" data-aos="flip-left" data-aos-delay="300">
+                    <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-4 text-blue-500">
+                        <i class="fas fa-road text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-2">AIPR</h3>
+                    <p class="text-gray-500 text-center">2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-2xl font-bold mb-8 text-center section-title" data-aos="fade-up">Projets spécifiques</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="project-card rounded-lg overflow-hidden relative h-48" style="background-image: url('https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');" data-aos="zoom-in">
+                    <div class="project-overlay w-full h-full flex items-center justify-center p-4">
+                        <div class="text-center text-white">
+                            <i class="fas fa-smoke text-4xl mb-3"></i>
+                            <h3 class="text-xl font-bold">Installation de systèmes de désenfumage</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card rounded-lg overflow-hidden relative h-48" style="background-image: url('https://images.unsplash.com/photo-1544197150-bc6313a1a0ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="project-overlay w-full h-full flex items-center justify-center p-4">
+                        <div class="text-center text-white">
+                            <i class="fas fa-network-wired text-4xl mb-3"></i>
+                            <h3 class="text-xl font-bold">Réseaux informatiques – câblage/cheminement</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card rounded-lg overflow-hidden relative h-48" style="background-image: url('https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="project-overlay w-full h-full flex items-center justify-center p-4">
+                        <div class="text-center text-white">
+                            <i class="fas fa-plug text-4xl mb-3"></i>
+                            <h3 class="text-xl font-bold">Tableaux électriques industriels/tertiaires</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card rounded-lg overflow-hidden relative h-48" style="background-image: url('https://images.unsplash.com/photo-1581093450021-33a4c862d5e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="project-overlay w-full h-full flex items-center justify-center p-4">
+                        <div class="text-center text-white">
+                            <i class="fas fa-building text-4xl mb-3"></i>
+                            <h3 class="text-xl font-bold">Démolition ancienne gare SNCF à Sotteville-lès-Rouen</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="https://www.linkedin.com/in/talisontrajano/" target="_blank" class="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center hover:bg-opacity-30 transition">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:talison.pt@gmx.fr" class="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center hover:bg-opacity-30 transition">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+33752963006" class="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center hover:bg-opacity-30 transition">
+                    <i class="fas fa-phone-alt"></i>
+                </a>
+            </div>
+            <p class="text-sm opacity-80">© 2023 Talison Pereira Trajano. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize AOS animation library
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+        
+        // Animate skill bars on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const skillBars = document.querySelectorAll('.skill-progress');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const width = entry.target.style.width;
+                        entry.target.style.width = '0';
+                        setTimeout(() => {
+                            entry.target.style.width = width;
+                        }, 100);
+                    }
+                });
+            }, {threshold: 0.5});
+            
+            skillBars.forEach(bar => {
+                observer.observe(bar);
+            });
+        });
+    </script>
+</body>
+</html>
