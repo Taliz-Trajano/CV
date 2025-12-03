@@ -33,33 +33,19 @@ document.addEventListener('DOMContentLoaded', function() {
             const formData = {
                 name: document.getElementById('name').value,
                 email: document.getElementById('email').value,
+                company: document.getElementById('company').value,
                 subject: document.getElementById('subject').value,
                 message: document.getElementById('message').value
             };
             
-            // Simulation d'envoi (à remplacer par un vrai traitement backend)
-            console.log('Données du formulaire:', formData);
+            // Simulation d'envoi
+            console.log('Message de recrutement reçu:', formData);
             
             // Affichage d'un message de confirmation
-            alert('Merci pour votre message, ' + formData.name + '! Je vous répondrai dans les plus brefs délais à l\'adresse ' + formData.email + '.');
+            alert('Merci pour votre message, ' + formData.name + '! Je vous répondrai dans les plus brefs délais concernant cette opportunité.');
             
             // Réinitialisation du formulaire
             contactForm.reset();
-            
-            // Dans une version réelle, vous enverriez les données à un serveur
-            // fetch('votre-endpoint', {
-            //     method: 'POST',
-            //     headers: {'Content-Type': 'application/json'},
-            //     body: JSON.stringify(formData)
-            // })
-            // .then(response => response.json())
-            // .then(data => {
-            //     alert('Message envoyé avec succès!');
-            //     contactForm.reset();
-            // })
-            // .catch(error => {
-            //     alert('Une erreur est survenue. Veuillez réessayer.');
-            // });
         });
     }
     
@@ -91,35 +77,4 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialisation au chargement
     animateOnScroll();
-    
-    // Mise en évidence de l'élément de navigation actif
-    const sections = document.querySelectorAll('section');
-    const navItems = document.querySelectorAll('.nav-link');
-    
-    window.addEventListener('scroll', () => {
-        let current = '';
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            
-            if (scrollY >= (sectionTop - 200)) {
-                current = section.getAttribute('id');
-            }
-        });
-        
-        navItems.forEach(item => {
-            item.classList.remove('active');
-            if (item.getAttribute('href').substring(1) === current) {
-                item.classList.add('active');
-            }
-        });
-    });
-    
-    // Ajout de la classe active pour le lien actif
-    navItems.forEach(item => {
-        if (item.getAttribute('href') === '#accueil') {
-            item.classList.add('active');
-        }
-    });
 });
